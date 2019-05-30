@@ -30,6 +30,7 @@ public class ArraysBasic {
 		 * for each item in array
 		 * 		do this
 		 */
+		//Shan
 		for(byte character : obj.manySmalls){
 			System.out.print(character); //printed
 			//also add the number ==> cumulative sum
