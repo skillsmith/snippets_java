@@ -5,6 +5,7 @@
  */
 package com.java.basics;
 
+
 public class Primitives {
 	//all whole numbers such as 100...
 	static byte smallestOne;
