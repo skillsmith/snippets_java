@@ -8,4 +8,4 @@ git commit -m "give any comments that you understand"
 
 git push origin <branch>
 
-git pull origin sudhan 
+git pull origin <branch>
