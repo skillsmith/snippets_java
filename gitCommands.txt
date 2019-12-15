@@ -1,0 +1,11 @@
+git clone https://github.com/skillsmith/snippets_java.git
+
+git status 
+
+git add filename  ( this is for modified file and new file)
+
+git commit -m "give any comments that you understand" 
+
+git push origin <branch>
+
+git pull origin <branch>
