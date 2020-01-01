@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -32,7 +33,7 @@ public class ExplictWait {
 	@Test
 	public void catchAndKickThem() throws InterruptedException{
 		WebElement currentElement;
-		WebDriverWait waitObj = new WebDriverWait(chromeInstance, 10); 
+		Wait<WebDriver> waitObj = new WebDriverWait(chromeInstance, 10); 
 		
 		//Step 1: Catch {find}
 		currentElement = waitObj.until(ExpectedConditions.presenceOfElementLocated(By.id("button100")));
@@ -44,6 +45,12 @@ public class ExplictWait {
 			currentElement.click();			
 		}
 
+		//Step 3: Kick next {react}
+		Alert alertbox = (Alert) waitObj.until(ExpectedConditions.alertIsPresent());
+		if (alertbox != null){
+			alertbox.dismiss();			
+		}
+		
 	}
 
 	@AfterMethod
